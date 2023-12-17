@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import FeedbackCard from '../feedback-card';
 
 /* eslint-disable no-unused-vars */
-const FeedbackList = ({ isLoading, feedbacks }) => {
+const FeedbackList = ({ isLoading, feedbacks, error }) => {
     if (isLoading) {
         return <div>Loading...</div>;
     }
