@@ -8,7 +8,7 @@ import { useFeedback } from '@/hooks/use-feedback';
 import FeedbackList from '@/components/feedback-list';
 
 const Home = () => {
-    const { data: feedbacks, isLoading } = useFeedback();
+    const { data: feedbacks, isLoading, error } = useFeedback();
 
     return (
         <Swiper
@@ -26,7 +26,7 @@ const Home = () => {
                 <IntroWelcome />
             </SwiperSlide>
             <SwiperSlide>
-                <FeedbackList isLoading={isLoading} feedbacks={feedbacks} />
+                <FeedbackList isLoading={isLoading} error={error} feedbacks={feedbacks} />
             </SwiperSlide>
         </Swiper>
     );

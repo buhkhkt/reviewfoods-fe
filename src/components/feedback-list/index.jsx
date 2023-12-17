@@ -8,6 +8,11 @@ const FeedbackList = ({ isLoading, feedbacks }) => {
         return <div>Loading...</div>;
     }
 
+    if (error) {
+        return <div>Error when fetching data...</div>
+    }
+    
+
     return (
         // <div className="grid grid-cols-4 gap-6">
         //     {feedbacks.data.map((feedback) => (
